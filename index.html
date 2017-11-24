@@ -5,20 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="portfolio of web developer esso">
-    <title>Esso Web Developer</title>
+    <meta name="description" content="Esso is a front end web developer with a knack for visuals. He also builds things using HTML/CSS, ReactJS, AngularJS, and several animation tools.">
+    <title>Esso Front End Web Developer</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="shortcut icon" href="favicon.ico"></head>
 
 <body>
-    <!-- fireworks -->
-    <!-- <canvas class="fireworks"></canvas> -->
     <!-- Container Card -->
     <div class="container">
-        <!-- Inside Container -->
-        <!-- left Row -->
-        <div class="left_row">
-            
-        </div>
+        <!-- Main Inner Container -->
+        <main class="inner-container sunny-theme" id="main-doc">
+            <a class="theme-toggle tooltip">
+                <i class="material-icons orange sun handy" id="sunny-theme">wb_sunny</i>
+                <i class="material-icons white moon hidden handy" id="nighty-theme">brightness_3</i>
+                <span class="tooltip-text" id="tooltip-text"></span>
+            </a>
+            <!-- Inner Content -->
+            <div class="inner-content">
+                <nav>
+                    <span class="geometric-m" hidden>
+                        <a href="/">Home</a>
+                    </span>
+                    <div class="menu-group">
+                        <a href="#/comming-soon" class="geometric-m">About</a>
+                        <a href="https://medium.com/@eslammahgoub" class="geometric-m">Writes</a>
+                        <a href="https://www.behance.net/eslammhagoub" class="geometric-m">Visuals</a>
+                        <a href="https://github.com/eslammahgoub" class="geometric-m">Code</a>
+                    </div>
+                </nav>
+                <article>
+                    <section class="intro">
+                        <h1 class="geometric-xl">
+                            Hey, my name is Eslam Mahgoub. I'm a front end web developer in Cairo,
+                            <br> writing clean, elegant and cofficient code at <a href="https://shopbox.com/" target="_blank" class="height-light-green">Shopbox</a>.
+                        </h1>
+                    </section>
+                    <section class="current">
+                        <div class="content">
+                            <span class="label">
+                                <h4 class="geometric-xs">Currently</h4>
+                            </span>
+                            <span class="content-row">
+                                <p class="geometric-m">
+                                    Building something new at Shopbox and preparing for indoor track.
+                                </p>
+                            </span>
+                        </div>
+                    </section>
+                    <section class="projects"></section>
+                    <section class="past-activity"></section>
+                </article>
+            </div>
+            <!-- Inner Footer -->
+            <div class="inner-footer">
+                <footer class="max-width-wrapper">
+                    <div class="inner-footer-row">
+                        <span class="active-marker" id="status"></span>
+                        <p class="title supporting-text" id="status-text"></p>
+                    </div>
+                </footer>
+            </div>
+        </main>
     </div>
 <script type="text/javascript" src="bundle.js"></script></body>
 
