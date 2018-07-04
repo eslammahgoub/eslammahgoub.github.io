@@ -215,7 +215,7 @@ module.exports = function(list, options) {
 
 	// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
 	// tags it will allow on a page
-	if (!options.singleton) options.singleton = isOldIE();
+	if (!options.singleton && typeof options.singleton !== "boolean") options.singleton = isOldIE();
 
 	// By default, add <style> tags to the <head> element
 	if (!options.insertInto) options.insertInto = "head";
@@ -605,7 +605,7 @@ __WEBPACK_IMPORTED_MODULE_0__app_engineJs___default.a.setStatus('active', ' For 
             nightyThemeEl.classList.remove(hiddenClassName);
             mainDoc.classList.remove(sunnyThemeClassName);
             mainDoc.classList.add(nightyThemeClassName);
-            tooltipEl.textContent = 'Activate Light Mode';
+            tooltipEl.textContent = 'LIGHT THEME';
             EngineJs.saveTheme(nightyThemeClassName);
         },
         sunnyTheme: function() {
@@ -613,7 +613,7 @@ __WEBPACK_IMPORTED_MODULE_0__app_engineJs___default.a.setStatus('active', ' For 
             sunnyThemeEl.classList.remove(hiddenClassName);
             mainDoc.classList.add(sunnyThemeClassName);
             mainDoc.classList.remove(nightyThemeClassName);
-            tooltipEl.textContent = 'Activate Dark Mode';
+            tooltipEl.textContent = 'DARK THEME';
             EngineJs.saveTheme(sunnyThemeClassName);
         },
         setStatus: function(status, txt) {
@@ -673,7 +673,7 @@ if(false) {
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(0)(undefined);
+exports = module.exports = __webpack_require__(0)(false);
 // imports
 exports.i(__webpack_require__(6), "");
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab);", ""]);
@@ -688,7 +688,7 @@ exports.push([module.i, "/*///////////////////////////////////////////\n//// @au
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(0)(undefined);
+exports = module.exports = __webpack_require__(0)(false);
 // imports
 
 
@@ -828,7 +828,7 @@ if(false) {
 /* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(0)(undefined);
+exports = module.exports = __webpack_require__(0)(false);
 // imports
 
 
@@ -873,12 +873,12 @@ if(false) {
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(0)(undefined);
+exports = module.exports = __webpack_require__(0)(false);
 // imports
 
 
 // module
-exports.push([module.i, "/*///////////////////////////////////////////\n//// @author: Eslam muhammad mahgoub\n///  @link: github.com/eslammahgoub\n///////////////////////////////////////*/\n\n\n/**\n * Container Styles\n */\n\n.container {\n    align-items: center;\n    display: flex;\n    flex-direction: column;\n    flex: 1;\n    width: 100%;\n    background-image: linear-gradient(90deg, #E9ECEF 0, #F9F9FA);\n}\n\n\n/**\n * Inner Container Styles\n */\n\n.inner-container {\n    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, .2);\n    display: flex;\n    flex: 1;\n    justify-content: space-around;\n    z-index: 2;\n    position: relative;\n    flex-direction: column;\n    align-items: center;\n    width: 100%;\n}\n\n\n/**\n * Tool Tip Styles\n */\n\n\n/* Tooltip text */\n\n.tooltip .tooltip-text {\n    padding-left: 20px;\n    opacity: 0;\n    -webkit-transition: opacity 0.3s ease-in-out;\n    -moz-transition: opacity 0.3s ease-in-out;\n    -o-transition: opacity 0.3s ease-in-out;\n    transition: opacity 0.3s ease-in-out;\n}\n\n\n/* Show the tooltip text when you mouse over the tooltip container */\n\n.tooltip:hover .tooltip-text {\n    opacity: 1;\n}\n\n\n/**\n * Inner Content Styles\n */\n\n.inner-content {\n    flex: 1;\n    max-width: 700px;\n    padding: 84px 0;\n    width: 100%\n}\n\n\n/**\n * Nav Styles\n */\n\nnav {\n    align-items: center;\n    display: flex;\n    position: relative;\n    user-select: none;\n}\n\nnav .menu-group a:not(:last-of-type) {\n    margin-right: 40px;\n}\n\nnav a {\n    text-decoration: none;\n    background: none;\n    font-size: 1em;\n}\n\n\n/**\n * Menu Group Styles\n */\n\n.menu-group:last-child {\n    margin-left: auto;\n}\n\n\n/**\n * Intro Styles\n */\n\n.intro {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    margin-top: 168px;\n    margin-bottom: 84px;\n}\n\n.intro h1 {\n    font-weight: 300;\n    letter-spacing: .2px;\n    text-rendering: optimizeLegibility;\n    -webkit-font-smoothing: subpixel-antialiased;\n    line-height: 36px;\n    margin-bottom: 0;\n}\n\n\n/**\n * Content Styles\n */\n\n.content {\n    display: -moz-flex;\n    display: -ms-flex;\n    display: -o-flex;\n    display: flex;\n    align-items: baseline;\n    margin-bottom: 56px;\n    justify-content: space-between;\n}\n\n\n/**\n * Content Row Styles\n */\n\n.content-row {\n    width: 500px;\n    max-width: 500px;\n}\n\n\n/**\n * Label Styles\n */\n\n.label {\n    padding: 20px;\n}\n\n.label h4 {\n    margin-bottom: 0;\n    margin-top: 0;\n}\n\n\n/**\n * Inner Footer Styles\n */\n\n.inner-footer {\n    align-items: baseline;\n    display: flex;\n    position: relative;\n    width: 100%;\n    z-index: 1000;\n}\n\n.inner-footer footer {\n    justify-content: space-around;\n}\n\n.max-width-wrapper {\n    width: 100%;\n}\n\n.inner-footer-row {\n    position: relative;\n}\n\n\n/**\n * Markes\n */\n\n.active-marker {\n    width: 10px;\n    height: 10px;\n    border-radius: 10px;\n    position: absolute;\n    left: -16px;\n    display: block;\n    top: 25px;\n    margin-right: -4px;\n}\n\n.title {\n    display: inline-block;\n    margin-bottom: 0;\n}\n\n.supporting-text {\n    opacity: .6;\n    font-family: 'Roboto', sans-serif;\n    font-size: 15px;\n    color: #2e394d;\n    letter-spacing: .2px;\n}\n\n\n/**\n * Theme Element Styles\n */\n\n.theme-toggle {\n    position: absolute;\n    top: 0;\n    left: 0;\n    z-index: 100;\n    padding: 20px;\n    transition: opacity 300 ease-in-out;\n}\n\n\n/**\n * Sun Animation\n */\n\n.sun {\n    -webkit-transform-origin: center center;\n    -moz-transform-origin: 50% 50%;\n    -o-transform-origin: center center;\n    -ms-transform-origin: center center;\n    transform-origin: 50% 50%;\n    -webkit-animation: spin 5s linear infinite;\n    -moz-animation: spin 5s linear infinite;\n    -o-animation: spin 5s linear infinite;\n    -ms-animation: spin 5s linear infinite;\n    animation: spin 5s linear infinite;\n}\n\n\n/**\n * Moon Animation\n */\n\n.moon {\n    -webkit-transform-origin: center center;\n    -moz-transform-origin: 50% 50%;\n    -o-transform-origin: center center;\n    -ms-transform-origin: center center;\n    transform-origin: 50% 50%;\n    -webkit-animation: jump 4s linear infinite;\n    -moz-animation: jump 4s linear infinite;\n    -o-animation: jump 4s linear infinite;\n    -ms-animation: jump 4s linear infinite;\n    animation: jump 4s linear infinite;\n}\n\n\n/* start spin animation */\n\n@-webkit-keyframes spin {\n    100% {\n        -webkit-transform: rotate(360deg);\n    }\n}\n\n@-moz-keyframes spin {\n    100% {\n        -moz-transform: rotate(360deg);\n    }\n}\n\n@-o-keyframes spin {\n    100% {\n        -o-transform: rotate(360deg);\n    }\n}\n\n@-ms-keyframes spin {\n    100% {\n        -ms-transform: rotate(360deg);\n    }\n}\n\n@keyframes spin {\n    100% {\n        transform: rotate(360deg);\n    }\n}\n\n\n/* start jump animation */\n\n@-webkit-keyframes jump {\n    0% {\n        -webkit-transform: scale(1.0) rotate(150deg);\n    }\n    65% {\n        -webkit-transform: scale(1.5) rotate(150deg);\n    }\n    100% {\n        -webkit-transform: scale(1.0) rotate(150deg);\n    }\n}\n\n@-moz-keyframes jump {\n    0% {\n        -moz-transform: scale(1.0) rotate(150deg);\n    }\n    65% {\n        -moz-transform: scale(1.5) rotate(150deg);\n    }\n    100% {\n        -moz-transform: scale(1.0) rotate(150deg);\n    }\n}\n\n@-o-keyframes jump {\n    0% {\n        -o-transform: scale(1.0) rotate(150deg);\n    }\n    65% {\n        -o-transform: scale(1.5) rotate(150deg);\n    }\n    100% {\n        -o-transform: scale(1.0) rotate(150deg);\n    }\n}\n\n@-ms-keyframes jump {\n    0% {\n        -ms-transform: scale(1.0) rotate(150deg);\n    }\n    65% {\n        -ms-transform: scale(1.5) rotate(150deg);\n    }\n    100% {\n        -ms-transform: scale(1.0) rotate(150deg);\n    }\n}\n\n@keyframes jump {\n    0% {\n        transform: scale(1.0) rotate(150deg);\n    }\n    65% {\n        transform: scale(1.5) rotate(150deg);\n    }\n    100% {\n        transform: scale(1.0) rotate(150deg);\n    }\n}", ""]);
+exports.push([module.i, "/*///////////////////////////////////////////\n//// @author: Eslam muhammad mahgoub\n///  @link: github.com/eslammahgoub\n///////////////////////////////////////*/\n\n\n/**\n * Container Styles\n */\n\n.container {\n    align-items: center;\n    display: flex;\n    flex-direction: column;\n    flex: 1;\n    width: 100%;\n    background-image: linear-gradient(90deg, #E9ECEF 0, #F9F9FA);\n}\n\n\n/**\n * Inner Container Styles\n */\n\n.inner-container {\n    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, .2);\n    display: flex;\n    flex: 1;\n    justify-content: space-around;\n    z-index: 2;\n    position: relative;\n    flex-direction: column;\n    align-items: center;\n    width: 100%;\n}\n\n\n/**\n * Tool Tip Styles\n */\n\n\n/* Tooltip text */\n\n.tooltip .tooltip-text {\n    padding-left: 5px;\n    opacity: 0;\n    -webkit-transition: opacity 0.3s ease-in-out;\n    -moz-transition: opacity 0.3s ease-in-out;\n    -o-transition: opacity 0.3s ease-in-out;\n    transition: opacity 0.3s ease-in-out;\n}\n\n\n/* Show the tooltip text when you mouse over the tooltip container */\n\n.tooltip:hover .tooltip-text {\n    opacity: 1;\n}\n\n\n/**\n * Inner Content Styles\n */\n\n.inner-content {\n    flex: 1;\n    max-width: 700px;\n    padding: 84px 0;\n    width: 100%\n}\n\n\n/**\n * Nav Styles\n */\n\nnav {\n    align-items: center;\n    display: flex;\n    position: relative;\n    user-select: none;\n}\n\nnav .menu-group a:not(:last-of-type) {\n    margin-right: 40px;\n}\n\nnav a {\n    text-decoration: none;\n    background: none;\n    font-size: 1em;\n}\n\n\n/**\n * Menu Group Styles\n */\n\n.menu-group:last-child {\n    margin-left: auto;\n}\n\n\n/**\n * Intro Styles\n */\n\n.intro {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    margin-top: 168px;\n    margin-bottom: 84px;\n}\n\n.intro h1 {\n    font-weight: 300;\n    letter-spacing: .2px;\n    text-rendering: optimizeLegibility;\n    -webkit-font-smoothing: subpixel-antialiased;\n    line-height: 36px;\n    margin-bottom: 0;\n}\n\n\n/**\n * Content Styles\n */\n\n.content {\n    display: -moz-flex;\n    display: -ms-flex;\n    display: -o-flex;\n    display: flex;\n    align-items: baseline;\n    margin-bottom: 56px;\n    justify-content: space-between;\n}\n\n\n/**\n * Content Row Styles\n */\n\n.content-row {\n    width: 500px;\n    max-width: 500px;\n}\n\n\n/**\n * Label Styles\n */\n\n.label {\n    padding: 20px;\n}\n\n.label h4 {\n    margin-bottom: 0;\n    margin-top: 0;\n}\n\n\n/**\n * Inner Footer Styles\n */\n\n.inner-footer {\n    align-items: baseline;\n    display: flex;\n    position: relative;\n    width: 100%;\n    z-index: 1000;\n}\n\n.inner-footer footer {\n    justify-content: space-around;\n}\n\n.max-width-wrapper {\n    width: 100%;\n}\n\n.inner-footer-row {\n    position: relative;\n}\n\n\n/**\n * Markes\n */\n\n.active-marker {\n    width: 10px;\n    height: 10px;\n    border-radius: 10px;\n    position: absolute;\n    left: -16px;\n    display: block;\n    top: 25px;\n    margin-right: -4px;\n}\n\n.title {\n    display: inline-block;\n    margin-bottom: 0;\n}\n\n.supporting-text {\n    opacity: .6;\n    font-family: 'Roboto', sans-serif;\n    font-size: 15px;\n    color: #2e394d;\n    letter-spacing: .2px;\n}\n\n\n/**\n * Theme Element Styles\n */\n\n.theme-toggle {\n    position: absolute;\n    top: 0;\n    left: 0;\n    z-index: 100;\n    padding: 20px;\n    transition: opacity 300s ease-in-out;\n}\n\n\n/**\n * Sun Animation\n */\n\n.sun {\n    -webkit-transform-origin: center center;\n    -moz-transform-origin: 50% 50%;\n    -o-transform-origin: center center;\n    -ms-transform-origin: center center;\n    transform-origin: 50% 50%;\n    -webkit-animation: spin 5s linear infinite;\n    -moz-animation: spin 5s linear infinite;\n    -o-animation: spin 5s linear infinite;\n    -ms-animation: spin 5s linear infinite;\n    animation: spin 5s linear infinite;\n}\n\n\n/**\n * Moon Animation\n */\n\n.moon {\n    -webkit-transform-origin: center center;\n    -moz-transform-origin: 50% 50%;\n    -o-transform-origin: center center;\n    -ms-transform-origin: center center;\n    transform-origin: 50% 50%;\n    -webkit-animation: jump 4s linear infinite;\n    -moz-animation: jump 4s linear infinite;\n    -o-animation: jump 4s linear infinite;\n    -ms-animation: jump 4s linear infinite;\n    animation: jump 4s linear infinite;\n}\n\n\n/* start spin animation */\n\n@-webkit-keyframes spin {\n    100% {\n        -webkit-transform: rotate(360deg);\n    }\n}\n\n@-moz-keyframes spin {\n    100% {\n        -moz-transform: rotate(360deg);\n    }\n}\n\n@-o-keyframes spin {\n    100% {\n        -o-transform: rotate(360deg);\n    }\n}\n\n@-ms-keyframes spin {\n    100% {\n        -ms-transform: rotate(360deg);\n    }\n}\n\n@keyframes spin {\n    100% {\n        transform: rotate(360deg);\n    }\n}\n\n\n/* start jump animation */\n\n@-webkit-keyframes jump {\n    0% {\n        -webkit-transform: scale(1.0) rotate(150deg);\n    }\n    65% {\n        -webkit-transform: scale(1.5) rotate(150deg);\n    }\n    100% {\n        -webkit-transform: scale(1.0) rotate(150deg);\n    }\n}\n\n@-moz-keyframes jump {\n    0% {\n        -moz-transform: scale(1.0) rotate(150deg);\n    }\n    65% {\n        -moz-transform: scale(1.5) rotate(150deg);\n    }\n    100% {\n        -moz-transform: scale(1.0) rotate(150deg);\n    }\n}\n\n@-o-keyframes jump {\n    0% {\n        -o-transform: scale(1.0) rotate(150deg);\n    }\n    65% {\n        -o-transform: scale(1.5) rotate(150deg);\n    }\n    100% {\n        -o-transform: scale(1.0) rotate(150deg);\n    }\n}\n\n@-ms-keyframes jump {\n    0% {\n        -ms-transform: scale(1.0) rotate(150deg);\n    }\n    65% {\n        -ms-transform: scale(1.5) rotate(150deg);\n    }\n    100% {\n        -ms-transform: scale(1.0) rotate(150deg);\n    }\n}\n\n@keyframes jump {\n    0% {\n        transform: scale(1.0) rotate(150deg);\n    }\n    65% {\n        transform: scale(1.5) rotate(150deg);\n    }\n    100% {\n        transform: scale(1.0) rotate(150deg);\n    }\n}", ""]);
 
 // exports
 
@@ -918,7 +918,7 @@ if(false) {
 /* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(0)(undefined);
+exports = module.exports = __webpack_require__(0)(false);
 // imports
 
 
@@ -963,7 +963,7 @@ if(false) {
 /* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(0)(undefined);
+exports = module.exports = __webpack_require__(0)(false);
 // imports
 
 
