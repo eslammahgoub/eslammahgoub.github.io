@@ -1,0 +1,196 @@
+@font-face {
+    font-family: 'Regular';
+    src: url('../fonts//AeonikRegular.eot');
+    src: url('../fonts//AeonikRegular.eot') format('embedded-opentype'),
+         url('../fonts//AeonikRegular.woff2') format('woff2'),
+         url('../fonts//AeonikRegular.woff') format('woff'),
+         url('../fonts//AeonikRegular.ttf') format('truetype'),
+         url('../fonts//AeonikRegular.svg#AeonikRegular') format('svg');
+}
+@font-face {
+    font-family: 'Medium';
+    src: url('../fonts//AeonikMedium.eot');
+    src: url('../fonts//AeonikMedium.eot') format('embedded-opentype'),
+         url('../fonts//AeonikMedium.woff2') format('woff2'),
+         url('../fonts//AeonikMedium.woff') format('woff'),
+         url('../fonts//AeonikMedium.ttf') format('truetype'),
+         url('../fonts//AeonikMedium.svg#AeonikMedium') format('svg');
+}
+@font-face {
+    font-family: 'Bold';
+    src: url('../fonts//AeonikBold.eot');
+    src: url('../fonts//AeonikBold.eot') format('embedded-opentype'),
+         url('../fonts//AeonikBold.woff2') format('woff2'),
+         url('../fonts//AeonikBold.woff') format('woff'),
+         url('../fonts//AeonikBold.ttf') format('truetype'),
+         url('../fonts//AeonikBold.svg#AeonikBold') format('svg');
+}
+
+ 
+ 
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+html, body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    padding:0;
+    margin:0;
+	font-size: 16px;
+}
+
+body {
+	margin: 0 10vmin;
+}
+::selection {
+  color: rgba(255,255,255,.99);
+  background: rgba(0,0,0,.99);
+}
+::-moz-selection {
+  color: rgba(255,255,255,.99);
+  background: rgba(0,0,0,.99);
+}
+
+.maxwidth {
+	max-width: 940px;
+	margin: 0 auto;
+}
+/* ----- intro ----- */
+.logo {
+	font-family: 'Bold';
+    font-size: 1.6em;
+	line-height: 80%;
+	color: #111111;
+	margin: 12vmin 0 18vmin 0;
+}
+
+h1 {
+	font-family: 'Bold';
+    font-size: 6em;
+    font-size: 7em;
+	line-height: 120%;
+	color: #111111;
+	margin-bottom: 18vmin;
+}
+.photo {
+	background-image: url(../img/eslam.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 65vmax;
+	width: 100%;
+    box-sizing: border-box;
+	margin: 16vmin auto;
+}
+
+p.large {
+	font-family: 'Bold';
+    font-size: 3.1em;
+	color: #111111;
+	line-height: 140%;
+	margin-bottom: 6vmin;
+	overflow: hidden;
+}
+
+p {
+	font-family: 'Regular';
+    font-size: 1.6em;
+
+	color: #111111;
+	line-height: 160%;
+	margin-bottom: 4vmin;
+	overflow: hidden;
+} 
+
+a.resume, a.resume:after, a.resume:visited {
+	font-family: 'Bold';
+	color: #111111;
+	cursor: pointer;
+}
+
+/* ----- contact ----- */
+
+.contact-list {
+	margin: 0vmin 0 20vmin 0;	
+}
+.contact {
+	font-family: 'Regular';
+    font-size: 1.5em;
+	color: #111111;
+	line-height: 180%;
+}
+
+a, a:after, a:visited {
+	color: #111111;
+	cursor: pointer;
+}
+
+
+/* ----- animation ----- */
+.animate {
+	-webkit-animation:animate .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+	-moz-animation:animate .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+	animation:animate .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+	-webkit-animation-fill-mode:backwards;
+	-moz-animation-fill-mode:backwards;
+	animation-fill-mode:backwards;
+}
+@-webkit-keyframes animate {
+	0% {opacity: 0;-webkit-transform: translateY(80px);}
+	100% {opacity: 1;-webkit-transform: translateY(0%);}	
+}
+
+@keyframes animate {
+	0% {opacity: 0;transform: translateY(80px);}
+	100% {opacity: 1;transform: translateY(0%);}	
+}
+.delaytitle { -webkit-animation-delay: .4s; animation-delay: .4s;}
+.delaycontent { -webkit-animation-delay: .8s; animation-delay: .8s;}
+
+
+
+@media screen and (max-width: 767px) {
+	body {
+		margin: 0;
+	}
+	.maxwidth {
+		margin: 0 6%;
+	}
+	h1 {
+		font-size: 3.5em;
+	}
+	p.large {
+	    font-size: 2.4em;
+		margin-bottom: 12vmin;
+	}
+	p {
+	    font-size: 1.4em;
+		margin-bottom: 8vmin;
+	}
+	.photo {
+		background-image: url(../img/eslam_mobile.jpg);
+		background-position: center center;
+		height: 140vmin;
+	}
+}
+
