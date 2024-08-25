@@ -71,6 +71,10 @@ body {
   background: rgba(0,0,0,.99);
 }
 
+a {
+	color: inherit;
+}
+
 .maxwidth {
 	max-width: 940px;
 	margin: 0 auto;
