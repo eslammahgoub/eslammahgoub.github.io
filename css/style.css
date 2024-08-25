@@ -127,6 +127,14 @@ a.resume, a.resume:after, a.resume:visited {
 	cursor: pointer;
 }
 
+.company-name {
+    background: #027FBE;
+    color: #fff;
+    padding: 6px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
 /* ----- contact ----- */
 
 .contact-list {
@@ -165,14 +173,6 @@ a, a:after, a:visited {
 }
 .delaytitle { -webkit-animation-delay: .4s; animation-delay: .4s;}
 .delaycontent { -webkit-animation-delay: .8s; animation-delay: .8s;}
-
-.company-name {
-	background: #027FBE;
-    color: #fff;
-    padding: 6px;
-    border-radius: 6px;
-    text-decoration: none;
-}
 
 
 @media screen and (max-width: 767px) {
