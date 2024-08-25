@@ -147,12 +147,6 @@ a.resume, a.resume:after, a.resume:visited {
 	line-height: 180%;
 }
 
-a, a:after, a:visited {
-	color: #111111;
-	cursor: pointer;
-}
-
-
 /* ----- animation ----- */
 .animate {
 	-webkit-animation:animate .6s cubic-bezier(0.2, 0.6, 0.2, 1);
