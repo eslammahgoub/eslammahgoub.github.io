@@ -81,13 +81,12 @@ body {
     font-size: 1.6em;
 	line-height: 80%;
 	color: #111111;
-	margin: 12vmin 0 18vmin 0;
+	margin: 10px 0;
 }
 
 h1 {
 	font-family: 'Bold';
-    	font-size: 60px;
-    	color: #fff;
+    	font-size: 15px;
     	max-width: fit-content;
 	margin-bottom: 2rem;
 }
