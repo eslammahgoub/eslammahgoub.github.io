@@ -191,3 +191,9 @@ a, a:after, a:visited {
 	}
 }
 
+@media (max-width: 500px) {
+	h1 {
+		background: transparent;
+	}
+}
+
