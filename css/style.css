@@ -86,7 +86,6 @@ body {
 
 h1 {
 	font-family: 'Bold';
-	background: #000;
     	font-size: 60px;
     	color: #fff;
     	max-width: fit-content;
@@ -190,10 +189,3 @@ a, a:after, a:visited {
 		height: 140vmin;
 	}
 }
-
-@media (max-width: 500px) {
-	h1 {
-		background: transparent;
-	}
-}
-
