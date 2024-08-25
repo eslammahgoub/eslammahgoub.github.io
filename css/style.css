@@ -86,11 +86,11 @@ body {
 
 h1 {
 	font-family: 'Bold';
-    font-size: 6em;
-    font-size: 7em;
-	line-height: 120%;
-	color: #111111;
-	margin-bottom: 18vmin;
+	background: #000;
+    	font-size: 60px;
+    	color: #fff;
+    	max-width: fit-content;
+	margin-bottom: 2rem;
 }
 .photo {
 	background-image: url(../img/eslam.png);
